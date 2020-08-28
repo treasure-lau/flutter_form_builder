@@ -111,7 +111,11 @@ class _FormBuilderRadioGroupState extends State<FormBuilderRadioGroup> {
                 .toList(growable: false),
             itemBuilder: (item) {
               return RadioButtonBuilder(
-                item.toString(),
+                // item.toString(),
+                widget.options
+                    .firstWhere((element) => element.value == item,
+                        orElse: () => null)
+                    ?.label,
                 textPosition: RadioButtonTextPosition.right,
               );
             },
