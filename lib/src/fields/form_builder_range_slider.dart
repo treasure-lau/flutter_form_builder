@@ -18,7 +18,7 @@ class FormBuilderRangeSlider extends StatefulWidget {
   final ValueChanged<RangeValues> onChangeStart;
   final ValueChanged<RangeValues> onChangeEnd;
   final RangeLabels labels;
-  final RangeSemanticFormatterCallback semanticFormatterCallback;
+  // final RangeSemanticFormatterCallback semanticFormatterCallback;
   final FormFieldSetter onSaved;
   final DisplayValues displayValues;
 
@@ -39,7 +39,7 @@ class FormBuilderRangeSlider extends StatefulWidget {
     this.onChangeStart,
     this.onChangeEnd,
     this.labels,
-    this.semanticFormatterCallback,
+    // this.semanticFormatterCallback,
     this.onSaved,
     this.displayValues = DisplayValues.all,
   }) : super(key: key);
@@ -114,7 +114,7 @@ class _FormBuilderRangeSliderState extends State<FormBuilderRangeSlider> {
                   onChangeEnd: widget.onChangeEnd,
                   onChangeStart: widget.onChangeStart,
                   labels: widget.labels,
-                  semanticFormatterCallback: widget.semanticFormatterCallback,
+                  // semanticFormatterCallback: widget.semanticFormatterCallback,
                   onChanged: _readOnly
                       ? null
                       : (RangeValues values) {
